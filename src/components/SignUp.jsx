@@ -35,7 +35,7 @@ const SignUp = () => {
       const response = await axios(config);
       console.log(response.data);
       localStorage.setItem("token", response.data.data.token);
-      navigate("checkout");
+      navigate("/checkout");
     } catch (error) {
       console.log(error.response);
       setValidation(error.response.data);

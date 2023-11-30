@@ -26,10 +26,7 @@ function GoogleLogin({ buttonText }) {
 
       localStorage.setItem("token", token);
 
-      // navigate("/");
-
-      // Temporary solution
-      window.location.href = "/";
+      window.location.href = "/checkout";
     } catch (error) {
       if (axios.isAxiosError(error)) {
         toast.error(error.response.data.message);
